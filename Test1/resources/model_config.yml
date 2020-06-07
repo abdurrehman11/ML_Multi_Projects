@@ -1,0 +1,65 @@
+model_info:
+  CMA_CP:
+    GBT1:
+      read_data:
+        query: card_present
+        columns: ['card_no', 'device_type','service_id','card_prg_id', 'point_of_srv_code', 'bill_cc', 'iso_message_type','is_multi_currency', 'trans_date','org_trace_audit', 'trans_time',
+                  'amount_requested', 'amount_processed', 'currency_code', 'merchant_cat_code', 'bill_curr_code', 'is_pin_based',  'is_international', 'nat_pos_cc',
+                  'country_code', 'cust_DOB', 'card_DOB', 'response_code', 'device_id', 'card_srno', 'zip', 'city', 'cust_city', 'cust_zip', 'cust_state', 'state',
+                  'cust_country', 'trans_type','src_card_no', 'card_created_on', 'first_act_on']
+      sampling:
+        under_sampling:
+          allow_under_sampling: true
+          maj_class_label: 0.0
+          under_sample_pctage: 100
+          under_sample_xfmr: 'MajorityClassCheckSumSampling'
+          checksum_digits: [5]
+          alw_nf_txs_frd_crd: false
+        over_sampling:
+          allow_over_sampling: false
+          min_class_label: 1.0
+          over_sampling_pctage: 100
+          over_sampling_xfmr: 'MinorityClassSmoteSampling'
+          k_nearest_neighbors: 5
+      preprocessing:
+        flow_version: fraud_engine
+      feature_engineering:
+        flow_version: fraud_engine
+      evaluation:
+        evaluationmetrics: ['TruePositive','FalsePositive','TrueNegative','FalseNegative','Precision', 'Recall', 'Fmeasure','Accuracy','FeatureWeightage']
+        evaluationclasses: [0.0, 1.0]
+      model_params:
+        model_name: gradient_boosted_tree
+        feature_list:
+          continuous_features: ['amount_requested_usd', 'terminal_capability_pan_mode_hitrate', 'merchant_cat_code_hitrate', 'hourly_hitrate',
+                                'service_id_hitrate', 'amount_requested_intervals_hitrate',
+                                'mcc_trans_type_hitrate' , 'mcc_amount_req_hitrate' , 'trans_type_amount_req_hitrate', 'days_since_reissue']
+          categorical_features: ['trans_day_of_week','period_of_day','merchant_group_id', 'device_type', 'terminal_capability_pan_mode','currency_code_is_international',
+                                 'hourly_hitrate_intervals', 'is_pin_based', 'is_fallback', 'is_geographic_threshold_exceeded', 'is_card_reissued']
+        features_column: features
+        enable_cv: Y
+      model_hyper_params:
+        max_depth: 5
+        max_bins: 32
+        min_instances_per_node: 1
+        min_info_gain: 0.0
+        max_memory_in_mb: 256
+        cache_node_ids: False
+        checkpoint_interval: 10
+        loss_type: logistic
+        max_iter: 20
+        step_size: 0.1
+        seed: 0
+        sub_sampling_rate: 1.0
+        prob_threshold: 0.50
+      train_test_split:
+        split_type: 'timebase_split'
+        test_ratio: 0.30
+        rank_by_col: 'trace_audit_no'
+        split_by_col: 'trans_date'
+        gap_period_in_days: 0
+      cross_validator:
+        max_depth: [5, 6]
+        max_iter: [35, 40]
+        sub_sampling_rate: [0.75]
+        step_size: [0.001]
