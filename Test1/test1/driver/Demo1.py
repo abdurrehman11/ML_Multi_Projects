@@ -4,6 +4,8 @@ from os.path import dirname
 from test1.utils.Constants import Constants
 from test1.init.InitializationHandler import InitializationHandler
 
+from test1.exceptions.AdditionOperationException import AdditionOperationException
+
 from test2 import Demo2
 from test3 import Demo3
 
@@ -16,15 +18,25 @@ class Demo1:
         self.logger = logging.getLogger(Constants.LOGGER_NAME)
 
     def add(self, x, y):
-        self.logger.info(f'Going to add {x} and {y}.')
-        addition = x + y
-        self.logger.info(f'Added {x} and {y} successfully.')
-        return addition
+        try:
+            self.logger.info(f'Going to add {x} and {y}.')
+            addition = x + y
+            self.logger.info(f'Added {x} and {y} successfully.')
+
+            return addition
+        except Exception as exp:
+            self.logger.error('Exception occurred in Addition.')
+            raise AdditionOperationException(exp)
+        except AdditionOperationException as exp:
+            self.logger.error('Addition operation failed while adding numbers.')
+            raise exp
+        except Exception as exp:
+            raise exp
 
 
 if __name__ == '__main__':
     d1 = Demo1()
-    add_result = d1.add(5, 2)
+    add_result = d1.add(5, 'a')
     print(add_result)
 
     d2 = Demo2()
