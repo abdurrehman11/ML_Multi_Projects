@@ -1,13 +1,12 @@
 from setuptools import setup
 
 setup(
-    name='test1',
+    name='commonexceps',
     version='0.1',
-    description='add operation',
+    description='commonexceps module',
     url='',
     author='ar',
     author_email='abdurrehman245@gmail.com',
     liscence='MIT',
-    packages=['test1'],
-    zip_safe=False,
-    install_requires=['test3', 'test2'])
+    packages=['commonexceps'],
+    zip_safe=False)

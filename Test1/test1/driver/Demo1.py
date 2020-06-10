@@ -3,8 +3,11 @@ from os.path import dirname
 
 from test1.utils.Constants import Constants
 from test1.init.InitializationHandler import InitializationHandler
+from test1.bl.AddNumbers import AddNumbers
 
-from test1.exceptions.AdditionOperationException import AdditionOperationException
+from commonexceps.AdditionOperationException import AdditionOperationException
+from commonexceps.SubtractionOperationException import SubtractionOperationException
+from commonexceps.MultiplicationOperationException import MultiplicationOperationException
 
 from test2 import Demo2
 from test3 import Demo3
@@ -17,18 +20,19 @@ class Demo1:
                                                 str(Constants.LOGGER_PROPERTIES_FILE_PATH))
         self.logger = logging.getLogger(Constants.LOGGER_NAME)
 
-    def add(self, x, y):
+    def main(self):
         try:
-            self.logger.info(f'Going to add {x} and {y}.')
-            addition = x + y
-            self.logger.info(f'Added {x} and {y} successfully.')
-
-            return addition
-        except Exception as exp:
-            self.logger.error('Exception occurred in Addition.')
-            raise AdditionOperationException(exp)
+            AddNumbers.add(5, '3')
+            Demo2.perform_subtraction(5, 3)
+            Demo3.perform_multiplication(5, 3)
         except AdditionOperationException as exp:
-            self.logger.error('Addition operation failed while adding numbers.')
+            self.logger.error("Exception occurred in Addition")
+            raise exp
+        except SubtractionOperationException as exp:
+            self.logger.error("Exception occurred in Subtraction")
+            raise exp
+        except MultiplicationOperationException as exp:
+            self.logger.error("Exception occurred in Multiplication")
             raise exp
         except Exception as exp:
             raise exp
@@ -36,13 +40,4 @@ class Demo1:
 
 if __name__ == '__main__':
     d1 = Demo1()
-    add_result = d1.add(5, 'a')
-    print(add_result)
-
-    d2 = Demo2()
-    sub_result = d2.sub(5, 2)
-    print(sub_result)
-
-    d3 = Demo3()
-    mul_result = d3.mul(5, 2)
-    print(mul_result)
+    d1.main()

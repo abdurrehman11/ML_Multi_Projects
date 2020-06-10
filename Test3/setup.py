@@ -3,10 +3,10 @@ from setuptools import setup
 setup(
     name='test3',
     version='0.1',
-    description='i2c pre processing module',
+    description='multiply operation',
     url='',
     author='ar',
-    author_email='sfatima@i2cinc.com',
-    liscence='i2c',
+    author_email='abdurrehman245@gmail.com',
+    liscence='MIT',
     packages=['test3'],
     zip_safe=False)

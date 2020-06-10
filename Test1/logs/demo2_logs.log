@@ -1,2 +1,14 @@
-[2020-06-07 17:05:15,591] [INFO] [Demo2:sub-11] - Going to sub 5 and 2.
-[2020-06-07 17:05:15,591] [INFO] [Demo2:sub-13] - Subtracted 5 and 2 successfully.
+[2020-06-10 19:22:26,501] [INFO] [SubtractNumbers:subtract-14] - Going to sub 5 and 3.
+[2020-06-10 19:22:26,502] [INFO] [SubtractNumbers:subtract-16] - Subtracted 5 and 3 successfully.
+[2020-06-10 19:22:26,502] [INFO] [SubtractNumbers:subtract-17] - Subtraction of 5 and 3: 2
+[2020-06-10 19:22:26,502] [INFO] [MultiplyNumbers:multiply-14] - Going to multiply 5 and 3.
+[2020-06-10 19:22:26,502] [INFO] [MultiplyNumbers:multiply-16] - Multiplied 5 and 3 successfully.
+[2020-06-10 19:22:26,502] [INFO] [MultiplyNumbers:multiply-17] - Multiplication of 5 and 3: 33333
+[2020-06-10 19:25:38,874] [INFO] [SubtractNumbers:subtract-14] - Going to sub 5 and 3.
+[2020-06-10 19:25:38,876] [INFO] [SubtractNumbers:subtract-16] - Subtracted 5 and 3 successfully.
+[2020-06-10 19:25:38,876] [INFO] [SubtractNumbers:subtract-17] - Subtraction of 5 and 3: 2
+[2020-06-10 19:25:38,876] [INFO] [MultiplyNumbers:multiply-14] - Going to multiply 5 and 3.
+[2020-06-10 19:25:38,876] [INFO] [MultiplyNumbers:multiply-16] - Multiplied 5 and 3 successfully.
+[2020-06-10 19:25:38,876] [INFO] [MultiplyNumbers:multiply-17] - Multiplication of 5 and 3: 15
+[2020-06-10 19:27:35,666] [INFO] [SubtractNumbers:subtract-14] - Going to sub 5 and 3.
+[2020-06-10 19:27:35,666] [ERROR] [SubtractNumbers:subtract-19] - Exception occurred while subtracting numbers.

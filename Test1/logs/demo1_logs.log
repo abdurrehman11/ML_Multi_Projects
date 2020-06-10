@@ -1,7 +1,27 @@
-[2020-06-07 17:05:15,590] [INFO] [Demo1:add-19] - Going to add 5 and 2.
-[2020-06-07 17:05:15,590] [INFO] [Demo1:add-21] - Added 5 and 2 successfully.
-[2020-06-09 23:02:37,255] [INFO] [Demo1:add-22] - Going to add 5 and a.
-[2020-06-09 23:12:34,295] [INFO] [Demo1:add-22] - Going to add 5 and a.
-[2020-06-09 23:12:34,296] [ERROR] [Demo1:add-28] - Exception occurred in Addition.
-[2020-06-09 23:16:52,041] [INFO] [Demo1:add-22] - Going to add 5 and a.
-[2020-06-09 23:16:52,041] [ERROR] [Demo1:add-28] - Exception occurred in Addition.
+[2020-06-10 19:20:17,959] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:20:17,959] [INFO] [AddNumbers:add-16] - Added 5 and 3 successfully.
+[2020-06-10 19:20:17,960] [INFO] [AddNumbers:add-17] - Sum of 5 and 3: 8
+[2020-06-10 19:21:19,197] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:21:19,197] [INFO] [AddNumbers:add-16] - Added 5 and 3 successfully.
+[2020-06-10 19:21:19,197] [INFO] [AddNumbers:add-17] - Sum of 5 and 3: 8
+[2020-06-10 19:22:26,501] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:22:26,501] [INFO] [AddNumbers:add-16] - Added 5 and 3 successfully.
+[2020-06-10 19:22:26,501] [INFO] [AddNumbers:add-17] - Sum of 5 and 3: 8
+[2020-06-10 19:25:38,873] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:25:38,874] [INFO] [AddNumbers:add-16] - Added 5 and 3 successfully.
+[2020-06-10 19:25:38,874] [INFO] [AddNumbers:add-17] - Sum of 5 and 3: 8
+[2020-06-10 19:25:59,127] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:25:59,127] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
+[2020-06-10 19:26:33,619] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:26:33,620] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
+[2020-06-10 19:27:35,665] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:27:35,666] [INFO] [AddNumbers:add-16] - Added 5 and 3 successfully.
+[2020-06-10 19:27:35,666] [INFO] [AddNumbers:add-17] - Sum of 5 and 3: 8
+[2020-06-10 19:29:56,790] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:29:56,791] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
+[2020-06-10 19:31:43,694] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 19:31:43,694] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
+[2020-06-10 20:04:55,403] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 20:04:55,404] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
+[2020-06-10 20:09:51,229] [INFO] [AddNumbers:add-14] - Going to add 5 and 3.
+[2020-06-10 20:09:51,230] [ERROR] [AddNumbers:add-19] - Exception occurred while adding numbers.
